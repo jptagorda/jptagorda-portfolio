@@ -51,7 +51,7 @@ export default function Home() {
             </Head>
             <Container className="mt-10">
                 <div className="max-w-2xl">
-                    <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">Fullstack website developer.</h1>
+                    <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">Fullstack Website Developer.</h1>
                     <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
                         I’m Justin, a software developer and entrepreneur based in Quezon City. I built many functional websites, from E-commerce to Multilevel Marketing website.
                     </p>
