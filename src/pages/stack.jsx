@@ -39,6 +39,7 @@ import {
     AlpineJSIcon,
     LaravelLivewireIcon,
 } from '@/components/StackIcons';
+import Head from 'next/head';
 
 export default function Stack() {
     const stacks = collect([
@@ -98,6 +99,10 @@ export default function Stack() {
         .all();
     return (
         <>
+            <Head>
+                <title>Tech Stack - Justin Tagorda</title>
+                <meta name="description" content="The tech stack i used in making projects." />
+            </Head>
             <Container className="mt-16 sm:mt-32">
                 {Object.keys(stacks).map((type, index) => (
                     <div key={index}>
