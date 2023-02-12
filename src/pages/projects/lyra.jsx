@@ -1,10 +1,6 @@
 import React from 'react';
 import ProjectShowLayout from '@/layouts/ProjectShowLayout';
-
-import LogoLaravel from '@/images/stack/laravel.svg';
-import LogoInertia from '@/images/stack/inertiajs.svg';
-import LogoTailwindcss from '@/images/stack/tailwindcss.svg';
-import LogoReactjs from '@/images/stack/react.svg';
+import { InertiaJSIcon, LaravelIcon, ReactJSIcon, TailwindCSSIcon } from '@/components/Stacks';
 
 export default function lyra() {
     const project = {
@@ -20,10 +16,10 @@ export default function lyra() {
         ),
         images: [...Array(8)],
         stacks: [
-            { name: 'Laravel', icon: LogoLaravel, href: 'https://laravel.com' },
-            { name: 'Reactjs', icon: LogoReactjs, href: 'https://beta.reactjs.org' },
-            { name: 'Inertiajs', icon: LogoInertia, href: 'https://inertiajs.com' },
-            { name: 'Tailwindcss', icon: LogoTailwindcss, href: 'https://tailwindcss.com' },
+            { name: 'Laravel', icon: LaravelIcon, href: 'https://laravel.com' },
+            { name: 'Reactjs', icon: ReactJSIcon, href: 'https://beta.reactjs.org' },
+            { name: 'Inertiajs', icon: InertiaJSIcon, href: 'https://inertiajs.com' },
+            { name: 'Tailwindcss', icon: TailwindCSSIcon, href: 'https://tailwindcss.com' },
         ],
     };
 

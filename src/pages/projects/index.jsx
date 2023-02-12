@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Card } from '@/components/Card';
 import { SimpleLayout } from '@/layouts/SimpleLayout';
 import logoPortfolio from '@/images/avatar.jpg';
-import logoNextjs from '@/images/stack/nextjs.svg';
+import logoNextjs from '@/images/stacks/nextjs.svg';
 import logoLyra from '@/images/projects/lyra.svg';
 import Link from 'next/link';
 import { GitHubIcon } from '@/components/SocialIcons';
@@ -24,7 +24,7 @@ const projects = [
     },
     {
         name: 'Nextjs Todo',
-        description: 'Simple todo list app build with Nextjs',
+        description: 'Simple todo list app built with Nextjs',
         logo: logoNextjs,
         links: [
             {
@@ -58,8 +58,7 @@ export default function Projects() {
             </Head>
             <SimpleLayout
                 title="Things I’ve made trying to put my dent in the universe."
-                intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
-            >
+                intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved.">
                 <ul role="list" className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
                     {projects.map(project => (
                         <Card as="li" key={project.name} className="flex h-72 justify-around">
@@ -72,7 +71,7 @@ export default function Projects() {
                             <div className="flex space-x-5">
                                 {project.links.map((item, index) => (
                                     <Link key={index} href={item.href} className="z-50" target="_blank">
-                                        <item.icon className="h-6 w-6 fill-gray-800 hover:opacity-75 dark:fill-gray-200" />
+                                        <item.icon className="f h-6 w-6 hover:opacity-75" />
                                     </Link>
                                 ))}
                             </div>

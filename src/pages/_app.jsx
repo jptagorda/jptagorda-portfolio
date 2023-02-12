@@ -28,7 +28,7 @@ export default function App({ Component, pageProps, router }) {
       </div>
       <div className="relative">
         <Header />
-        <main>
+        <main className='text-black dark:text-white'>
           <Component previousPathname={previousPathname} {...pageProps} />
         </main>
         <Footer />

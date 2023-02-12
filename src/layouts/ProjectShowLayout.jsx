@@ -13,7 +13,7 @@ function StackLink({ className, href, icon: Icon, children }) {
                 href={href}
                 className="group flex items-center text-sm font-medium text-zinc-800 transition hover:text-purple-500 dark:text-zinc-200 dark:hover:text-purple-500"
             >
-                <Image src={Icon} alt="" className="h-10 w-10" unoptimized />
+                <Icon className="h-10 w-10" />
                 <span className="ml-4">{children}</span>
             </Link>
         </li>
