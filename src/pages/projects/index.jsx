@@ -3,28 +3,29 @@ import Image from 'next/image';
 
 import { Card } from '@/components/Card';
 import { SimpleLayout } from '@/layouts/SimpleLayout';
-import logoAnimaginary from '@/images/logos/animaginary.svg';
 import logoPortfolio from '@/images/avatar.jpg';
 import logoNextjs from '@/images/stack/nextjs.svg';
+import logoLyra from '@/images/projects/lyra.svg';
 import Link from 'next/link';
 import { GitHubIcon } from '@/components/SocialIcons';
-import { GlobeAsiaAustraliaIcon } from '@heroicons/react/24/solid';
+import { ArrowTopRightOnSquareIcon, GlobeAsiaAustraliaIcon } from '@heroicons/react/24/solid';
 
 const projects = [
     {
         name: 'My portfolio',
         description: 'My portfolio website resository.',
+        logo: logoPortfolio,
         links: [
             {
                 href: 'https://github.com/jxclsv/jptagorda-portfolio',
                 icon: GitHubIcon,
             },
         ],
-        logo: logoPortfolio,
     },
     {
         name: 'Nextjs Todo',
         description: 'Simple todo list app build with Nextjs',
+        logo: logoNextjs,
         links: [
             {
                 href: 'https://github.com/jxclsv/nextjs-todo',
@@ -32,16 +33,15 @@ const projects = [
             },
             {
                 href: 'https://nextjs-todo.pages.dev/',
-                icon: GlobeAsiaAustraliaIcon,
+                icon: ArrowTopRightOnSquareIcon,
             },
         ],
-        logo: logoNextjs,
     },
     {
         name: 'Laravel Lyra',
         description: 'High performance web animation library, hand-written in optimized WASM.',
-        links: [{ href: '#', label: 'github.com', icon: GitHubIcon }],
-        logo: logoAnimaginary,
+        links: [{ href: '/projects/lyra', label: 'github.com', icon: ArrowTopRightOnSquareIcon }],
+        logo: logoLyra,
     },
 ];
 
@@ -69,16 +69,12 @@ export default function Projects() {
                             <h2 className="z-20 mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">{project.name}</h2>
                             <Card.Description>{project.description}</Card.Description>
                             <div className="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl" />
-                            <div className='flex space-x-5'>
-
-                            {project.links.map((item, index) => (
-                                <Link key={index} href={item.href} className="z-50">
-                                    <span className="absolute z-50 h-10 w-10 sm:rounded-2xl" />
-                                    <span className="z-20">
-                                        <item.icon className="h-8 w-8 z-50 fill-purple-500" />
-                                    </span>
-                                </Link>
-                            ))}
+                            <div className="flex space-x-5">
+                                {project.links.map((item, index) => (
+                                    <Link key={index} href={item.href} className="z-50" target="_blank">
+                                        <item.icon className="h-6 w-6 fill-gray-800 hover:opacity-75" />
+                                    </Link>
+                                ))}
                             </div>
                         </Card>
                     ))}
