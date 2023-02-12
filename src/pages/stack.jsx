@@ -34,22 +34,37 @@ import {
     LaravelSocialiteIcon,
     LaravelTelescopeIcon,
     LaravelValetIcon,
+    InertiaJSIcon,
+    SpatieIcon,
+    AlpineJSIcon,
+    LaravelLivewireIcon,
 } from '@/components/Stacks';
 
 export default function Stack() {
     const stacks = collect([
-        { name: 'VueJS', type: 'frontend', avatar: VueJSIcon, href: 'https://vuejs.org' },
-        { name: 'NuxtJS', type: 'frontend', avatar: NuxtJSIcon, href: 'https://nuxt.com/' },
-        { name: 'ReactJS', type: 'frontend', avatar: ReactJSIcon, href: 'https://beta.reactjs.org' },
-        { name: 'NextJS', type: 'frontend', avatar: NextJSIcon, href: 'https://beta.nextjs.org' },
-        { name: 'TailwindCSS', type: 'frontend', avatar: TailwindCSSIcon, href: 'https://tailwindcss.com' },
-        { name: 'TailwindUI', type: 'frontend', avatar: TailwindCSSIcon, href: 'https://tailwindui.com' },
-        { name: 'Bootstrap', type: 'frontend', avatar: BootstrapIcon, href: 'https://getbootstrap.com' },
+        { name: 'Laravel', type: 'primary stack', avatar: LaravelIcon, href: 'https://laravel.com' },
+        { name: 'InertiaJS', type: 'primary stack', avatar: InertiaJSIcon, href: 'https://inertiajs.com' },
+        { name: 'ReactJS', type: 'primary stack', avatar: ReactJSIcon, href: 'https://beta.reactjs.org' },
+        { name: 'VueJS', type: 'primary stack', avatar: VueJSIcon, href: 'https://vuejs.org' },
+        { name: 'TailwindCSS', type: 'primary stack', avatar: TailwindCSSIcon, href: 'https://tailwindcss.com' },
+        { name: 'TailwindUI', type: 'primary stack', avatar: TailwindCSSIcon, href: 'https://tailwindui.com' },
 
-        { name: 'Laravel', type: 'backend', avatar: LaravelIcon, href: 'https://laravel.com' },
-        { name: 'ExpressJS', type: 'backend', avatar: ExpressJSIcon, href: 'https://expressjs.com' },
-        { name: 'NodeJS', type: 'backend', avatar: NodeJSIcon, href: 'https://nodejs.org' },
-        { name: 'PHP', type: 'backend', avatar: PHPIcon, href: 'https://php.net' },
+        { name: 'VueJS', type: 'frontend frameworks', avatar: VueJSIcon, href: 'https://vuejs.org' },
+        { name: 'NuxtJS', type: 'frontend frameworks', avatar: NuxtJSIcon, href: 'https://nuxt.com/' },
+        { name: 'AlpineJS', type: 'frontend frameworks', avatar: AlpineJSIcon, href: 'https://nuxt.com/' },
+        { name: 'ReactJS', type: 'frontend frameworks', avatar: ReactJSIcon, href: 'https://beta.reactjs.org' },
+        { name: 'NextJS', type: 'frontend frameworks', avatar: NextJSIcon, href: 'https://beta.nextjs.org' },
+
+        { name: 'TailwindCSS', type: 'css frameworks', avatar: TailwindCSSIcon, href: 'https://tailwindcss.com' },
+        { name: 'TailwindUI', type: 'css frameworks', avatar: TailwindCSSIcon, href: 'https://tailwindui.com' },
+        { name: 'Bootstrap', type: 'css frameworks', avatar: BootstrapIcon, href: 'https://getbootstrap.com' },
+
+        { name: 'Laravel', type: 'backend frameworks', avatar: LaravelIcon, href: 'https://laravel.com' },
+        { name: 'Laravel Livewire', type: 'backend frameworks', avatar: LaravelLivewireIcon, href: 'https://laravel.com' },
+        { name: 'InertiaJS', type: 'backend frameworks', avatar: InertiaJSIcon, href: 'https://inertiajs.com' },
+        { name: 'ExpressJS', type: 'backend frameworks', avatar: ExpressJSIcon, href: 'https://expressjs.com' },
+        { name: 'NodeJS', type: 'backend frameworks', avatar: NodeJSIcon, href: 'https://nodejs.org' },
+        { name: 'PHP', type: 'backend frameworks', avatar: PHPIcon, href: 'https://php.net' },
 
         { name: 'Mysql', type: 'database', avatar: MysqlIcon, href: 'https://mysql.com' },
         { name: 'Mariadb', type: 'database', avatar: MariaDBIcon, href: 'https://mariadb.org' },
@@ -76,6 +91,8 @@ export default function Stack() {
         { name: 'Laravel Socialite', type: 'laravel-packages', avatar: LaravelSocialiteIcon, href: 'https://laravel.com/docs/socialite' },
         { name: 'Laravel Telescope', type: 'laravel-packages', avatar: LaravelTelescopeIcon, href: 'https://laravel.com/docs/telescope' },
         { name: 'Laravel Valet', type: 'laravel-packages', avatar: LaravelValetIcon, href: 'https://laravel.com/docs/valet' },
+        { name: 'Spatie Laravel Permission', type: 'laravel-packages', avatar: SpatieIcon, href: 'https://github.com/spatie/laravel-permission' },
+        { name: 'Spatie Laravel Sluggable', type: 'laravel-packages', avatar: SpatieIcon, href: 'https://github.com/spatie/laravel-sluggable' },
     ])
         .groupBy('type')
         .all();
@@ -87,7 +104,7 @@ export default function Stack() {
                         <h1 className="my-32 text-center font-bold uppercase tracking-wider">{type}</h1>
                         <ul role="list" className="grid grid-cols-2 gap-x-16 gap-y-16 sm:grid-cols-2 lg:grid-cols-4">
                             {stacks[type].items.map(stack => (
-                                <Card as="li" key={stack.name}>
+                                <Card as="li" key={stack.name + stack.type}>
                                     <div className="relative z-10 m-auto flex h-12 w-12 items-center justify-center">
                                         <stack.avatar className="h-full w-full" />
                                     </div>
