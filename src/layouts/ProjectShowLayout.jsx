@@ -42,17 +42,6 @@ export default function ProjectShowLayout({ project }) {
                     <div className="lg:order-first lg:row-span-2">
                         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">{project.title}</h1>
                         <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">{project.description}</div>
-
-                        <div className="mt-10">
-                            <h2 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl">Stacks used</h2>
-                            <ul role="list" className="space-y-4">
-                                {project.stacks?.map((item, index) => (
-                                    <StackLink key={index} href={item.href} icon={item.icon} className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40">
-                                        {item.name}
-                                    </StackLink>
-                                ))}
-                            </ul>
-                        </div>
                     </div>
                     {/* <div className="mb-20 lg:pl-20">
                         <h3>Stacks used</h3>
@@ -66,7 +55,18 @@ export default function ProjectShowLayout({ project }) {
                     </div> */}
                 </div>
 
-                <div className="space-y-10 mt-10">
+                <div className="mt-10 space-y-10">
+                    <h2 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl">Stacks used</h2>
+                    <ul role="list" className="grid grid-cols-2 gap-y-5 lg:grid-cols-4">
+                        {project.stacks?.map((item, index) => (
+                            <StackLink key={index} href={item.href} icon={item.icon} className=" border-zinc-100 dark:border-zinc-700/40">
+                                {item.name}
+                            </StackLink>
+                        ))}
+                    </ul>
+                </div>
+
+                <div className="mt-10 space-y-10">
                     <h2 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl">Screenshots</h2>
 
                     <ul role="list" className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-2 xl:gap-x-8">
