@@ -51,16 +51,16 @@ export default function Stack() {
 
         { name: 'VueJS', type: 'frontend frameworks', avatar: VueJSIcon, href: 'https://vuejs.org' },
         { name: 'NuxtJS', type: 'frontend frameworks', avatar: NuxtJSIcon, href: 'https://nuxt.com/' },
-        { name: 'AlpineJS', type: 'frontend frameworks', avatar: AlpineJSIcon, href: 'https://nuxt.com/' },
         { name: 'ReactJS', type: 'frontend frameworks', avatar: ReactJSIcon, href: 'https://beta.reactjs.org' },
         { name: 'NextJS', type: 'frontend frameworks', avatar: NextJSIcon, href: 'https://beta.nextjs.org' },
+        { name: 'AlpineJS', type: 'frontend frameworks', avatar: AlpineJSIcon, href: 'https://alpinejs.dev/' },
 
         { name: 'TailwindCSS', type: 'css frameworks', avatar: TailwindCSSIcon, href: 'https://tailwindcss.com' },
         { name: 'TailwindUI', type: 'css frameworks', avatar: TailwindCSSIcon, href: 'https://tailwindui.com' },
         { name: 'Bootstrap', type: 'css frameworks', avatar: BootstrapIcon, href: 'https://getbootstrap.com' },
 
         { name: 'Laravel', type: 'backend frameworks', avatar: LaravelIcon, href: 'https://laravel.com' },
-        { name: 'Laravel Livewire', type: 'backend frameworks', avatar: LaravelLivewireIcon, href: 'https://laravel.com' },
+        { name: 'Laravel Livewire', type: 'backend frameworks', avatar: LaravelLivewireIcon, href: 'https://laravel-livewire.com' },
         { name: 'InertiaJS', type: 'backend frameworks', avatar: InertiaJSIcon, href: 'https://inertiajs.com' },
         { name: 'ExpressJS', type: 'backend frameworks', avatar: ExpressJSIcon, href: 'https://expressjs.com' },
         { name: 'NodeJS', type: 'backend frameworks', avatar: NodeJSIcon, href: 'https://nodejs.org' },
