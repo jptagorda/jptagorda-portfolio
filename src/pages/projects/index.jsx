@@ -72,7 +72,7 @@ export default function Projects() {
                             <div className="flex space-x-5">
                                 {project.links.map((item, index) => (
                                     <Link key={index} href={item.href} className="z-50" target="_blank">
-                                        <item.icon className="h-6 w-6 fill-gray-800 hover:opacity-75" />
+                                        <item.icon className="h-6 w-6 fill-gray-800 hover:opacity-75 dark:fill-gray-200" />
                                     </Link>
                                 ))}
                             </div>
