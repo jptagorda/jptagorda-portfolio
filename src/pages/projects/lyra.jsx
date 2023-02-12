@@ -1,11 +1,13 @@
 import React from 'react';
 import ProjectShowLayout from '@/layouts/ProjectShowLayout';
-import { InertiaJSIcon, LaravelIcon, ReactJSIcon, TailwindCSSIcon } from '@/components/Stacks';
+import { InertiaJSIcon, LaravelIcon, ReactJSIcon, TailwindCSSIcon } from '@/components/StackIcons';
+
+import { LyraIcon } from '@/components/ProjectIcons';
 
 export default function lyra() {
     const project = {
-        title: 'Lyra',
-        avatar: '/images/logos/lyra.svg',
+        name: 'Lyra',
+        avatar: LyraIcon,
         description: (
             <>
                 <p className="text-lg">

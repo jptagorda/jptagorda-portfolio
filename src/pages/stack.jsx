@@ -38,7 +38,7 @@ import {
     SpatieIcon,
     AlpineJSIcon,
     LaravelLivewireIcon,
-} from '@/components/Stacks';
+} from '@/components/StackIcons';
 
 export default function Stack() {
     const stacks = collect([
