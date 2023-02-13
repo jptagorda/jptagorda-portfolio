@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 import clsx from 'clsx';
 import { Container } from '@/components/Container';
@@ -34,7 +33,7 @@ function Photos() {
                             rotations[imageIndex % rotations.length],
                         )}
                     >
-                        <Image src={image} alt="" sizes="(min-width: 640px) 18rem, 11rem" className="absolute inset-0 h-full w-full object-cover" />
+                        <img src={image} alt="" sizes="(min-width: 640px) 18rem, 11rem" className="absolute inset-0 h-full w-full object-cover" />
                     </div>
                 ))}
             </div>

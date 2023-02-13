@@ -1,5 +1,4 @@
 import { Fragment, useEffect, useRef } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Popover, Transition } from '@headlessui/react';
@@ -199,7 +198,7 @@ function AvatarContainer({ className, ...props }) {
 function Avatar({ large = false, className, ...props }) {
     return (
         <Link href="/" aria-label="Home" className={clsx(className, 'pointer-events-auto')} {...props}>
-            <Image
+            <img
                 src={avatarImage}
                 alt=""
                 sizes={large ? '4rem' : '2.25rem'}
