@@ -33,7 +33,7 @@ function Photos() {
                             rotations[imageIndex % rotations.length],
                         )}
                     >
-                        <img src={image} alt="" sizes="(min-width: 640px) 18rem, 11rem" className="absolute inset-0 h-full w-full object-cover" />
+                        <img src={image.src} alt="" sizes="(min-width: 640px) 18rem, 11rem" className="absolute inset-0 h-full w-full object-cover" />
                     </div>
                 ))}
             </div>
